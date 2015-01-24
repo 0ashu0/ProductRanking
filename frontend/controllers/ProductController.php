@@ -3,16 +3,16 @@
 namespace frontend\controllers;
 
 use Yii;
-use frontend\models\Profile;
-use frontend\models\ProfileSearch;
+use frontend\models\Product;
+use frontend\models\ProductSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ProfileController implements the CRUD actions for Profile model.
+ * ProductController implements the CRUD actions for Product model.
  */
-class ProfileController extends Controller
+class ProductController extends Controller
 {
     public function behaviors()
     {
@@ -27,12 +27,12 @@ class ProfileController extends Controller
     }
 
     /**
-     * Lists all Profile models.
+     * Lists all Product models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new ProfileSearch();
+        $searchModel = new ProductSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -42,7 +42,7 @@ class ProfileController extends Controller
     }
 
     /**
-     * Displays a single Profile model.
+     * Displays a single Product model.
      * @param integer $id
      * @return mixed
      */
@@ -54,17 +54,16 @@ class ProfileController extends Controller
     }
 
     /**
-     * Creates a new Profile model.
+     * Creates a new Product model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Profile();
-        $model->userID = yii::$app->user->getId();
+        $model = new Product();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->profileID]);
+            return $this->redirect(['view', 'id' => $model->productID]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -73,7 +72,7 @@ class ProfileController extends Controller
     }
 
     /**
-     * Updates an existing Profile model.
+     * Updates an existing Product model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -83,7 +82,7 @@ class ProfileController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->profileID]);
+            return $this->redirect(['view', 'id' => $model->productID]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -92,7 +91,7 @@ class ProfileController extends Controller
     }
 
     /**
-     * Deletes an existing Profile model.
+     * Deletes an existing Product model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -105,15 +104,15 @@ class ProfileController extends Controller
     }
 
     /**
-     * Finds the Profile model based on its primary key value.
+     * Finds the Product model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Profile the loaded model
+     * @return Product the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Profile::findOne($id)) !== null) {
+        if (($model = Product::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

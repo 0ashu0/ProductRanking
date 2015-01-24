@@ -69,6 +69,7 @@ class User extends ActiveRecord implements IdentityInterface
         return[
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
+            'username' => 'Username',
         ];
     }
 

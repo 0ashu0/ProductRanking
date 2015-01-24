@@ -3,16 +3,16 @@
 namespace frontend\controllers;
 
 use Yii;
-use frontend\models\Profile;
-use frontend\models\ProfileSearch;
+use frontend\models\Review;
+use frontend\models\ReviewSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ProfileController implements the CRUD actions for Profile model.
+ * ReviewController implements the CRUD actions for Review model.
  */
-class ProfileController extends Controller
+class ReviewController extends Controller
 {
     public function behaviors()
     {
@@ -27,12 +27,12 @@ class ProfileController extends Controller
     }
 
     /**
-     * Lists all Profile models.
+     * Lists all Review models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new ProfileSearch();
+        $searchModel = new ReviewSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -42,7 +42,7 @@ class ProfileController extends Controller
     }
 
     /**
-     * Displays a single Profile model.
+     * Displays a single Review model.
      * @param integer $id
      * @return mixed
      */
@@ -54,17 +54,18 @@ class ProfileController extends Controller
     }
 
     /**
-     * Creates a new Profile model.
+     * Creates a new Review model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Profile();
-        $model->userID = yii::$app->user->getId();
+        $model = new Review();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->profileID]);
+        if ($model->load(Yii::$app->request->post())) {
+            $model->userID = yii::$app->user->getId();
+            $model->save();
+            return $this->redirect(['view', 'id' => $model->reviewID]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -73,7 +74,7 @@ class ProfileController extends Controller
     }
 
     /**
-     * Updates an existing Profile model.
+     * Updates an existing Review model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -83,7 +84,7 @@ class ProfileController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->profileID]);
+            return $this->redirect(['view', 'id' => $model->reviewID]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -92,7 +93,7 @@ class ProfileController extends Controller
     }
 
     /**
-     * Deletes an existing Profile model.
+     * Deletes an existing Review model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -105,15 +106,15 @@ class ProfileController extends Controller
     }
 
     /**
-     * Finds the Profile model based on its primary key value.
+     * Finds the Review model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Profile the loaded model
+     * @return Review the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Profile::findOne($id)) !== null) {
+        if (($model = Review::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

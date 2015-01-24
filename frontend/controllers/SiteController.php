@@ -135,10 +135,7 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 if (Yii::$app->getUser()->login($user)) {
-//                    return $this->goHome();
-                    $url = Url::to(['profile/create', 'id' => $user->getId()]);
-                    return $this->$url;
-
+                    return $this->goHome();
                 }
             }
         }
