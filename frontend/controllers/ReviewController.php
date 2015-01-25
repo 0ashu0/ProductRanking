@@ -8,6 +8,8 @@ use frontend\models\ReviewSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\Response;
+use yii\bootstrap\ActiveForm;
 
 /**
  * ReviewController implements the CRUD actions for Review model.
@@ -62,6 +64,16 @@ class ReviewController extends Controller
     {
         $model = new Review();
 
+//        if ($model->load(Yii::$app->request->post())) {
+//            $model->userID = yii::$app->user->getId();
+//            $model->save();
+//            return $this->redirect(['view', 'id' => $model->reviewID]);
+//        } else {
+//            return $this->render('create', [
+//                'model' => $model,
+//            ]);
+//        }
+
         if ($model->load(Yii::$app->request->post())) {
             $model->userID = yii::$app->user->getId();
             $model->save();
@@ -71,6 +83,7 @@ class ReviewController extends Controller
                 'model' => $model,
             ]);
         }
+
     }
 
     /**

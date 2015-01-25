@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
-use frontend\models\Product;
+use frontend\models\Order;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Review */
@@ -15,7 +15,7 @@ use frontend\models\Product;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'productID')->dropDownList(
-        ArrayHelper::map(Product::find()->all(),'productID','name'),
+        ArrayHelper::map(Order::find()->select(['productID'])->where('userID' == Yii::$app->user->getId())->all(),'productID','product.name'),
         ['prompt' => 'Select product']
     ) ?>
 
