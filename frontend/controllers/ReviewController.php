@@ -1,6 +1,9 @@
 <?php
 
 namespace frontend\controllers;
+//namespace app\components;
+
+require(__DIR__ . '/../../components/Opinion.php');
 
 use Yii;
 use frontend\models\Review;
@@ -10,6 +13,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\Response;
 use yii\bootstrap\ActiveForm;
+use components\Opinion;
 
 /**
  * ReviewController implements the CRUD actions for Review model.
@@ -34,6 +38,7 @@ class ReviewController extends Controller
      */
     public function actionIndex()
     {
+//        $model = new Review();
         $searchModel = new ReviewSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -132,5 +137,23 @@ class ReviewController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    public function actionOpen()
+    {
+        $op = new Opinion();
+        $model = new Review();
+        $string = 'it a nice product with respect to camera.';
+
+        $result = $op->classify($string);
+
+        return $this->render('open',
+            [
+                'model' => $model,
+                'op' => $op,
+                'result' => $result,
+                'string' => $string,
+            ]
+        );
     }
 }
