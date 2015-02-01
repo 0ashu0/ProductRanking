@@ -69,6 +69,8 @@ class ReviewController extends Controller
     {
         $model = new Review();
 
+        $userID = yii::$app->user->getId();
+
 //        if ($model->load(Yii::$app->request->post())) {
 //            $model->userID = yii::$app->user->getId();
 //            $model->save();
@@ -80,7 +82,7 @@ class ReviewController extends Controller
 //        }
 
         if ($model->load(Yii::$app->request->post())) {
-            $model->userID = yii::$app->user->getId();
+            $model->userID = $userID;
             $model->save();
             return $this->redirect(['view', 'id' => $model->reviewID]);
         } else {

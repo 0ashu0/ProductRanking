@@ -7,6 +7,9 @@ use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 use yii\db\Expression;
+use frontend\models\Profile;
+use frontend\models\Review;
+use frontend\models\Order;
 
 /**
  * User model
@@ -21,6 +24,10 @@ use yii\db\Expression;
  * @property integer $created_at
  * @property integer $updated_at
  * @property string $password write-only password
+ *
+ * @property Order[] $orders
+ * @property Profile[] $profiles
+ * @property Review[] $reviews
  */
 class User extends ActiveRecord implements IdentityInterface
 {
@@ -202,6 +209,30 @@ class User extends ActiveRecord implements IdentityInterface
     public function removePasswordResetToken()
     {
         $this->password_reset_token = null;
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getOrders()
+    {
+        return $this->hasMany(Order::className(), ['userID' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProfiles()
+    {
+        return $this->hasMany(Profile::className(), ['userID' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getReviews()
+    {
+        return $this->hasMany(Review::className(), ['userID' => 'id']);
     }
 
 }

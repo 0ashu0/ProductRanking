@@ -14,10 +14,7 @@ use frontend\models\Order;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'productID')->dropDownList(
-    ArrayHelper::map(Order::find()->select(['productID'])->where(['userID' => Yii::$app->user->getId()])->all(),'productID','product.name'),
-    ['prompt' => 'Select product']
-    ) ?>
+<!--    <?= $form->field($model, 'productID')->textarea(['rows' => 6]) ?>-->
 
     <?= $form->field($model, 'review')->textarea(['rows' => 6]) ?>
 
