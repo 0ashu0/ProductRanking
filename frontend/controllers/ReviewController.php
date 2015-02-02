@@ -145,6 +145,37 @@ class ReviewController extends Controller
     {
         $op = new Opinion();
         $model = new Review();
+
+//        $reviews = Review::find()
+//            ->asArray()
+//            ->all();
+
+        $query = 'SELECT * FROM review';
+        $reviews = Review::findBySql($query)
+            ->asArray()
+            ->all();
+
+        foreach($reviews as $entry => $value)
+        {
+            if(is_array($entry))
+            {
+                foreach($entry as $key => $val)
+                {
+
+                }
+            }
+        }
+
+//        foreach($reviews as $review)
+//        {
+//            $op->classify($review);
+//            $value = array(
+//                'string' => $review,
+//                'sentiment' => $op
+//            );
+//        }
+
+
         $string = 'it a nice product with respect to camera.';
 
         $result = $op->classify($string);
@@ -155,6 +186,8 @@ class ReviewController extends Controller
                 'op' => $op,
                 'result' => $result,
                 'string' => $string,
+                'reviews' => $reviews,
+                'value' => $value,
             ]
         );
     }
