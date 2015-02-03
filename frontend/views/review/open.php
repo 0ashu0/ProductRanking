@@ -12,11 +12,11 @@
 //echo '<pre>', var_export($string), '<pre/>';
 //echo '<pre>', var_export($result), '<pre/>';
 
-echo $string;
+//echo $string;
 echo '<br/>';
-echo $result;
+//echo $result;
 
 
-echo '<pre>', var_export($reviews), '<pre/>';
+//echo '<pre>', var_export($reviews), '<pre/>';
 
-echo '<pre>', var_export($value), '<pre/>';
+//echo '<pre>', var_export($arrayObject), '<pre/>';

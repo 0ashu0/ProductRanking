@@ -143,7 +143,7 @@ class ReviewController extends Controller
 
     public function actionOpen()
     {
-        $op = new Opinion();
+        $polarity = new Opinion();
         $model = new Review();
 
 //        $reviews = Review::find()
@@ -155,16 +155,9 @@ class ReviewController extends Controller
             ->asArray()
             ->all();
 
-        foreach($reviews as $entry => $value)
-        {
-            if(is_array($entry))
-            {
-                foreach($entry as $key => $val)
-                {
-
-                }
-            }
-        }
+//        $storeData = json_encode($reviews, JSON_PRETTY_PRINT);
+//        $file = './../../components/data/data.json';
+//        file_put_contents($file, $storeData);
 
 //        foreach($reviews as $review)
 //        {
@@ -175,19 +168,55 @@ class ReviewController extends Controller
 //            );
 //        }
 
+        $jsonPosFile = './../../components/data/posdata.json';
+        $jsonNegFile = './../../components/data/negdata.json';
 
-        $string = 'it a nice product with respect to camera.';
+        foreach($reviews as $review)
+        {
+            $reviewID = $review['reviewID'];
+            $productID = $review['productID'];
+            $review = $review['review'];
+            $polarity->classify($review);
 
-        $result = $op->classify($string);
+            $arrayObject = array(
+                'reviewID'  =>  $reviewID,
+                'productID' =>  $productID,
+                'review'    =>  $review,
+                'polarity'  =>  $polarity
+            );
+
+            if($polarity == 'pos')
+            {
+                $jsonPosContent = file_get_contents($jsonPosFile);
+                $jsonDecode = json_decode($jsonPosContent, TRUE);
+                $arrayValue = array_merge((array)$jsonDecode, $arrayObject);
+                $json = json_encode($arrayValue, JSON_PRETTY_PRINT);
+                file_put_contents($jsonPosFile,$json);
+                unset($json);
+            }
+            if($polarity == 'neg')
+            {
+                $jsonNegContent = file_get_contents($jsonNegFile);
+                $jsonDecode = json_decode($jsonNegContent, TRUE);
+                $arrayValue = array_merge((array)$jsonDecode, $arrayObject);
+                $json = json_encode($arrayValue, JSON_PRETTY_PRINT);
+                file_put_contents($jsonNegFile,$json);
+                unset($json);
+            }
+        }
+
+//        $string = 'it a nice product with respect to camera.';
+
+//        $result = $polarity->classify($string);
 
         return $this->render('open',
             [
                 'model' => $model,
-                'op' => $op,
-                'result' => $result,
-                'string' => $string,
+//                'polarity' => $polarity,
+//                'result' => $result,
+//                'string' => $string,
                 'reviews' => $reviews,
-                'value' => $value,
+//                'arrayObject' => $arrayObject,
             ]
         );
     }
