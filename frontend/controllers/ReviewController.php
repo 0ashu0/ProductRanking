@@ -155,9 +155,9 @@ class ReviewController extends Controller
             ->asArray()
             ->all();
 
-//        $storeData = json_encode($reviews, JSON_PRETTY_PRINT);
-//        $file = './../../components/data/data.json';
-//        file_put_contents($file, $storeData);
+        $storeData = json_encode($reviews, JSON_PRETTY_PRINT);
+        $file = './../../components/data/data.json';
+        file_put_contents($file, $storeData);
 
 //        foreach($reviews as $review)
 //        {
@@ -178,11 +178,18 @@ class ReviewController extends Controller
             $review = $review['review'];
             $polarity->classify($review);
 
+//            $arrayObject = array(
+//                $reviewID  =>  $reviewID,
+//                'productID' =>  $productID,
+//                'review'    =>  $review,
+//                'polarity'  =>  $polarity
+//            );
+
             $arrayObject = array(
-                'reviewID'  =>  $reviewID,
-                'productID' =>  $productID,
-                'review'    =>  $review,
-                'polarity'  =>  $polarity
+                $reviewID,
+                $productID,
+                $review,
+                $polarity
             );
 
             if($polarity == 'pos')

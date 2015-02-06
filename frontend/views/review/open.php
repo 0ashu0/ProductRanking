@@ -17,6 +17,6 @@ echo '<br/>';
 //echo $result;
 
 
-//echo '<pre>', var_export($reviews), '<pre/>';
+echo '<pre>', var_export($reviews), '<pre/>';
 
 //echo '<pre>', var_export($arrayObject), '<pre/>';
