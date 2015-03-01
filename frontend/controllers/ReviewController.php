@@ -141,6 +141,21 @@ class ReviewController extends Controller
         }
     }
 
+    /*
+     * This functions accepts file, and array and print the json data to the file
+     */
+    protected function jsonPrinter($filename, $array)
+    {
+        $jsonContent = file_get_contents($filename);
+        $jsonDecode = json_decode($jsonContent, TRUE);
+        $json = json_encode($array, JSON_PRETTY_PRINT);
+        file_put_contents($filename,$json);
+        unset($filename);
+        unset($jsonContent);
+        unset($jsonDecode);
+        unset($json);
+    }
+
     public function actionOpen()
     {
         $polarity = new Opinion();
@@ -159,71 +174,112 @@ class ReviewController extends Controller
         $file = './../../components/data/data.json';
         file_put_contents($file, $storeData);
 
-//        foreach($reviews as $review)
-//        {
-//            $op->classify($review);
-//            $value = array(
-//                'string' => $review,
-//                'sentiment' => $op
-//            );
-//        }
 
         $jsonPosFile = './../../components/data/posdata.json';
         $jsonNegFile = './../../components/data/negdata.json';
+        $expandedFile = './../../components/data/expand.json';
+
+        $bigArray = array ();
+        $result = array();
+        $allReviews = array();
+        $positiveResult = array();
+        $negativeResult = array();
 
         foreach($reviews as $review)
         {
+            $userID = $review['userID'];
             $reviewID = $review['reviewID'];
             $productID = $review['productID'];
             $review = $review['review'];
-            $polarity->classify($review);
 
-//            $arrayObject = array(
-//                $reviewID  =>  $reviewID,
-//                'productID' =>  $productID,
-//                'review'    =>  $review,
-//                'polarity'  =>  $polarity
-//            );
+            $rev = explode(". ", $review);
+            $nameTypes    = array("first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth");
+
+            $count = 0;
+            /*
+             * isolating lines from the review
+             */
+            foreach($rev as $single)
+            {
+                if(isset($single))
+                {
+                    ${$nameTypes[$count]} = $single; // variables $first, $second
+                }
+                $count = $count + 1;
+            }
+
+            $count = 0;
+
+            /*
+             * finding polarity of the line and creating an array
+             */
+            foreach($nameTypes as $index)
+            {
+                if(isset(${$nameTypes[$count]})) // ${$index}
+                {
+                    // echo $nameTypes[$count];
+                    // echo ${$nameTypes[$count]};
+                    $thisPolarity = $polarity->classify(${$nameTypes[$count]});
+
+                    $currentSentence = array(${$nameTypes[$count]}, $thisPolarity);
+                    $currentArray = array($nameTypes[$count] => $currentSentence);
+
+                    $result = array($currentArray);
+                    $allReviews = array_merge($allReviews, $currentArray);
+//                    echo '<pre>', var_dump($result), '<pre/>';
+
+                    $polarityArray = array(
+                        'reviewID' => $reviewID,
+                        'userID' => $userID,
+                        'productID' => $productID,
+                        'review' => $review,
+                        'result' => $result
+                    );
+
+//                    echo '<pre>', var_dump($polarityArray), '<pre/>';
+
+                    if($thisPolarity == 'pos')
+                    {
+                        $positiveResult[] = $polarityArray;
+                    }
+                    if($thisPolarity == 'neg')
+                    {
+                        $negativeResult[] = $polarityArray;
+                    }
+                }
+                $count = $count + 1;
+            }
+
+
+            foreach($nameTypes as $index)
+            {
+                unset(${$index});
+            }
+
+            echo '<br>';
 
             $arrayObject = array(
-                $reviewID,
-                $productID,
-                $review,
-                $polarity
+                'reviewID' => $reviewID,
+                'userID' => $userID,
+                'productID' => $productID,
+                'review' => $review,
+                'allReviews' => $allReviews
             );
 
-            if($polarity == 'pos')
-            {
-                $jsonPosContent = file_get_contents($jsonPosFile);
-                $jsonDecode = json_decode($jsonPosContent, TRUE);
-                $arrayValue = array_merge((array)$jsonDecode, $arrayObject);
-                $json = json_encode($arrayValue, JSON_PRETTY_PRINT);
-                file_put_contents($jsonPosFile,$json);
-                unset($json);
-            }
-            if($polarity == 'neg')
-            {
-                $jsonNegContent = file_get_contents($jsonNegFile);
-                $jsonDecode = json_decode($jsonNegContent, TRUE);
-                $arrayValue = array_merge((array)$jsonDecode, $arrayObject);
-                $json = json_encode($arrayValue, JSON_PRETTY_PRINT);
-                file_put_contents($jsonNegFile,$json);
-                unset($json);
-            }
+            $bigArray[] = $arrayObject;
         }
 
-//        $string = 'it a nice product with respect to camera.';
 
-//        $result = $polarity->classify($string);
+        $this->jsonPrinter($jsonPosFile, $positiveResult);
+        $this->jsonPrinter($jsonNegFile, $negativeResult);
+
+        $this->jsonPrinter($expandedFile, $bigArray);
 
         return $this->render('open',
             [
                 'model' => $model,
-//                'polarity' => $polarity,
-//                'result' => $result,
-//                'string' => $string,
                 'reviews' => $reviews,
-//                'arrayObject' => $arrayObject,
+                'bigArray' => $bigArray,
             ]
         );
     }

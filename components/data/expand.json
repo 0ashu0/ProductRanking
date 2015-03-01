@@ -1,0 +1,182 @@
+[
+    {
+        "reviewID": "1",
+        "userID": "1",
+        "productID": "1",
+        "review": "it is a good product. best for those who just want basic functionalities.",
+        "allReviews": {
+            "first": [
+                "it is a good product",
+                "neg"
+            ],
+            "second": [
+                "best for those who just want basic functionalities.",
+                "pos"
+            ]
+        }
+    },
+    {
+        "reviewID": "2",
+        "userID": "1",
+        "productID": "9",
+        "review": "It has a good quality camera, and battery life is great too. Quite difficult to hold as the phone size is big. but big screen is good for video viewing.",
+        "allReviews": {
+            "first": [
+                "It has a good quality camera, and battery life is great too",
+                "pos"
+            ],
+            "second": [
+                "Quite difficult to hold as the phone size is big",
+                "neg"
+            ],
+            "third": [
+                "but big screen is good for video viewing.",
+                "neg"
+            ]
+        }
+    },
+    {
+        "reviewID": "3",
+        "userID": "1",
+        "productID": "4",
+        "review": "great phone. It has excellent 12 MP camera and 1600 dpi screen. sound quality is just excellent. Screen size is good and the processor is fastest among others.",
+        "allReviews": {
+            "first": [
+                "great phone",
+                "neg"
+            ],
+            "second": [
+                "It has excellent 12 MP camera and 1600 dpi screen",
+                "pos"
+            ],
+            "third": [
+                "sound quality is just excellent",
+                "pos"
+            ],
+            "fourth": [
+                "Screen size is good and the processor is fastest among others.",
+                "pos"
+            ]
+        }
+    },
+    {
+        "reviewID": "4",
+        "userID": "5",
+        "productID": "4",
+        "review": "it has an excellent Retina display. battery life is not good but can be better. The camera is great and has 12 MP. The sound is ok but I use headphone.",
+        "allReviews": {
+            "first": [
+                "it has an excellent Retina display",
+                "pos"
+            ],
+            "second": [
+                "battery life is not good but can be better",
+                "neg"
+            ],
+            "third": [
+                "The camera is great and has 12 MP",
+                "pos"
+            ],
+            "fourth": [
+                "The sound is ok but I use headphone.",
+                "pos"
+            ]
+        }
+    },
+    {
+        "reviewID": "5",
+        "userID": "5",
+        "productID": "3",
+        "review": "Not better than apple i5 but still good. The camera is better and the battery life is good as well. sound quality is great but lacks clarity. Processor is of excellent quality and is fast.",
+        "allReviews": {
+            "first": [
+                "Not better than apple i5 but still good",
+                "neg"
+            ],
+            "second": [
+                "The camera is better and the battery life is good as well",
+                "pos"
+            ],
+            "third": [
+                "sound quality is great but lacks clarity",
+                "pos"
+            ],
+            "fourth": [
+                "Processor is of excellent quality and is fast.",
+                "pos"
+            ]
+        }
+    },
+    {
+        "reviewID": "6",
+        "userID": "3",
+        "productID": "9",
+        "review": "Samsung star lacks a good camera and perhaps can make improvement in the sound quality as well. the body is not that good and is not hand friendly.",
+        "allReviews": {
+            "first": [
+                "Samsung star lacks a good camera and perhaps can make improvement in the sound quality as well",
+                "pos"
+            ],
+            "second": [
+                "the body is not that good and is not hand friendly.",
+                "neg"
+            ],
+            "third": [
+                "sound quality is great but lacks clarity",
+                "pos"
+            ],
+            "fourth": [
+                "Processor is of excellent quality and is fast.",
+                "pos"
+            ]
+        }
+    },
+    {
+        "reviewID": "7",
+        "userID": "3",
+        "productID": "3",
+        "review": "Its a very good iPhone. being i4s the processor is not better than I5 but still it is quite fast. Camera is great and is capable of taking high-quality pictures.",
+        "allReviews": {
+            "first": [
+                "Its a very good iPhone",
+                "pos"
+            ],
+            "second": [
+                "being i4s the processor is not better than I5 but still it is quite fast",
+                "neg"
+            ],
+            "third": [
+                "Camera is great and is capable of taking high-quality pictures.",
+                "pos"
+            ],
+            "fourth": [
+                "Processor is of excellent quality and is fast.",
+                "pos"
+            ]
+        }
+    },
+    {
+        "reviewID": "8",
+        "userID": "3",
+        "productID": "7",
+        "review": "This phone has better sound quality but lacks strong body. overall battery life is ok and works till 36 hours without charging.",
+        "allReviews": {
+            "first": [
+                "This phone has better sound quality but lacks strong body",
+                "neg"
+            ],
+            "second": [
+                "overall battery life is ok and works till 36 hours without charging.",
+                "pos"
+            ],
+            "third": [
+                "Camera is great and is capable of taking high-quality pictures.",
+                "pos"
+            ],
+            "fourth": [
+                "Processor is of excellent quality and is fast.",
+                "pos"
+            ]
+        }
+    }
+]
