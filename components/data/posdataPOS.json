@@ -1,0 +1,981 @@
+[
+    {
+        "reviewID": "1",
+        "userID": "1",
+        "productID": "1",
+        "Sentence": [
+            "it is a good product",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "it",
+                "tag": "PRP\r\n"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "a",
+                "tag": "DT"
+            },
+            {
+                "token": "good",
+                "tag": "JJ"
+            },
+            {
+                "token": "product",
+                "tag": "NN\r\n"
+            }
+        ]
+    },
+    {
+        "reviewID": "1",
+        "userID": "1",
+        "productID": "1",
+        "Sentence": [
+            "best for those who just want basic functionalities.",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "best",
+                "tag": "JJS"
+            },
+            {
+                "token": "for",
+                "tag": "IN"
+            },
+            {
+                "token": "those",
+                "tag": "DT\r\n"
+            },
+            {
+                "token": "who",
+                "tag": "WP"
+            },
+            {
+                "token": "just",
+                "tag": "RB"
+            },
+            {
+                "token": "want",
+                "tag": "VBP"
+            },
+            {
+                "token": "basic",
+                "tag": "JJ"
+            },
+            {
+                "token": "functionalities.",
+                "tag": "NNS"
+            }
+        ]
+    },
+    {
+        "reviewID": "2",
+        "userID": "1",
+        "productID": "9",
+        "Sentence": [
+            "It has a good quality camera, and battery life is great too",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "It",
+                "tag": "PRP\r\n"
+            },
+            {
+                "token": "has",
+                "tag": "VBZ"
+            },
+            {
+                "token": "a",
+                "tag": "DT"
+            },
+            {
+                "token": "good",
+                "tag": "JJ"
+            },
+            {
+                "token": "quality",
+                "tag": "NN"
+            },
+            {
+                "token": "camera",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "and",
+                "tag": "CC"
+            },
+            {
+                "token": "battery",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "life",
+                "tag": "NN"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "great",
+                "tag": "JJ"
+            },
+            {
+                "token": "too",
+                "tag": "RB\r\n"
+            }
+        ]
+    },
+    {
+        "reviewID": "2",
+        "userID": "1",
+        "productID": "9",
+        "Sentence": [
+            "Quite difficult to hold as the phone size is big",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "Quite",
+                "tag": "RB"
+            },
+            {
+                "token": "difficult",
+                "tag": "JJ\r\n"
+            },
+            {
+                "token": "to",
+                "tag": "TO"
+            },
+            {
+                "token": "hold",
+                "tag": "VB"
+            },
+            {
+                "token": "as",
+                "tag": "IN"
+            },
+            {
+                "token": "the",
+                "tag": "DT"
+            },
+            {
+                "token": "phone",
+                "tag": "NN"
+            },
+            {
+                "token": "size",
+                "tag": "NN"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "big",
+                "tag": "JJ"
+            }
+        ]
+    },
+    {
+        "reviewID": "2",
+        "userID": "1",
+        "productID": "9",
+        "Sentence": [
+            "but big screen is good for video viewing.",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "but",
+                "tag": "CC"
+            },
+            {
+                "token": "big",
+                "tag": "JJ"
+            },
+            {
+                "token": "screen",
+                "tag": "NN"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "good",
+                "tag": "JJ"
+            },
+            {
+                "token": "for",
+                "tag": "IN"
+            },
+            {
+                "token": "video",
+                "tag": "NN"
+            },
+            {
+                "token": "viewing.",
+                "tag": "VBG"
+            }
+        ]
+    },
+    {
+        "reviewID": "3",
+        "userID": "1",
+        "productID": "4",
+        "Sentence": [
+            "great phone",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "great",
+                "tag": "JJ"
+            },
+            {
+                "token": "phone",
+                "tag": "NN"
+            }
+        ]
+    },
+    {
+        "reviewID": "3",
+        "userID": "1",
+        "productID": "4",
+        "Sentence": [
+            "It has excellent 12 MP camera and 1600 dpi screen",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "It",
+                "tag": "PRP\r\n"
+            },
+            {
+                "token": "has",
+                "tag": "VBZ"
+            },
+            {
+                "token": "excellent",
+                "tag": "JJ\r\n"
+            },
+            {
+                "token": "12",
+                "tag": "NN"
+            },
+            {
+                "token": "MP",
+                "tag": "NNP\r\n"
+            },
+            {
+                "token": "camera",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "and",
+                "tag": "CC"
+            },
+            {
+                "token": "1600",
+                "tag": "NN"
+            },
+            {
+                "token": "dpi",
+                "tag": "NN"
+            },
+            {
+                "token": "screen",
+                "tag": "NN"
+            }
+        ]
+    },
+    {
+        "reviewID": "3",
+        "userID": "1",
+        "productID": "4",
+        "Sentence": [
+            "sound quality is just excellent",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "sound",
+                "tag": "NN"
+            },
+            {
+                "token": "quality",
+                "tag": "NN"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "just",
+                "tag": "RB"
+            },
+            {
+                "token": "excellent",
+                "tag": "JJ\r\n"
+            }
+        ]
+    },
+    {
+        "reviewID": "3",
+        "userID": "1",
+        "productID": "4",
+        "Sentence": [
+            "Screen size is good and the processor is fastest among others.",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "Screen",
+                "tag": "NN"
+            },
+            {
+                "token": "size",
+                "tag": "NN"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "good",
+                "tag": "JJ"
+            },
+            {
+                "token": "and",
+                "tag": "CC"
+            },
+            {
+                "token": "the",
+                "tag": "DT"
+            },
+            {
+                "token": "processor",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "fastest",
+                "tag": "JJS"
+            },
+            {
+                "token": "among",
+                "tag": "IN\r\n"
+            },
+            {
+                "token": "others.",
+                "tag": "NNS\r\n"
+            }
+        ]
+    },
+    {
+        "reviewID": "4",
+        "userID": "5",
+        "productID": "4",
+        "Sentence": [
+            "it has an excellent Retina display",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "it",
+                "tag": "PRP\r\n"
+            },
+            {
+                "token": "has",
+                "tag": "VBZ"
+            },
+            {
+                "token": "an",
+                "tag": "DT"
+            },
+            {
+                "token": "excellent",
+                "tag": "JJ\r\n"
+            },
+            {
+                "token": "Retina",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "display",
+                "tag": "NN"
+            }
+        ]
+    },
+    {
+        "reviewID": "4",
+        "userID": "5",
+        "productID": "4",
+        "Sentence": [
+            "battery life is not good but can be better",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "battery",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "life",
+                "tag": "NN"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "not",
+                "tag": "RB\r\n"
+            },
+            {
+                "token": "good",
+                "tag": "JJ"
+            },
+            {
+                "token": "but",
+                "tag": "CC"
+            },
+            {
+                "token": "can",
+                "tag": "MD"
+            },
+            {
+                "token": "be",
+                "tag": "VB"
+            },
+            {
+                "token": "better",
+                "tag": "JJR"
+            }
+        ]
+    },
+    {
+        "reviewID": "4",
+        "userID": "5",
+        "productID": "4",
+        "Sentence": [
+            "The camera is great and has 12 MP",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "The",
+                "tag": "DT"
+            },
+            {
+                "token": "camera",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "great",
+                "tag": "JJ"
+            },
+            {
+                "token": "and",
+                "tag": "CC"
+            },
+            {
+                "token": "has",
+                "tag": "VBZ"
+            },
+            {
+                "token": "12",
+                "tag": "NN"
+            },
+            {
+                "token": "MP",
+                "tag": "NNP\r\n"
+            }
+        ]
+    },
+    {
+        "reviewID": "5",
+        "userID": "5",
+        "productID": "3",
+        "Sentence": [
+            "Not better than apple i5 but still good",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "Not",
+                "tag": "RB\r\n"
+            },
+            {
+                "token": "better",
+                "tag": "JJR"
+            },
+            {
+                "token": "than",
+                "tag": "IN"
+            },
+            {
+                "token": "apple",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "i5",
+                "tag": "NN"
+            },
+            {
+                "token": "but",
+                "tag": "CC"
+            },
+            {
+                "token": "still",
+                "tag": "RB"
+            },
+            {
+                "token": "good",
+                "tag": "JJ"
+            }
+        ]
+    },
+    {
+        "reviewID": "5",
+        "userID": "5",
+        "productID": "3",
+        "Sentence": [
+            "The camera is better and the battery life is good as well",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "The",
+                "tag": "DT"
+            },
+            {
+                "token": "camera",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "better",
+                "tag": "JJR"
+            },
+            {
+                "token": "and",
+                "tag": "CC"
+            },
+            {
+                "token": "the",
+                "tag": "DT"
+            },
+            {
+                "token": "battery",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "life",
+                "tag": "NN"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "good",
+                "tag": "JJ"
+            },
+            {
+                "token": "as",
+                "tag": "IN"
+            },
+            {
+                "token": "well",
+                "tag": "RB"
+            }
+        ]
+    },
+    {
+        "reviewID": "5",
+        "userID": "5",
+        "productID": "3",
+        "Sentence": [
+            "sound quality is great but lacks clarity",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "sound",
+                "tag": "NN"
+            },
+            {
+                "token": "quality",
+                "tag": "NN"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "great",
+                "tag": "JJ"
+            },
+            {
+                "token": "but",
+                "tag": "CC"
+            },
+            {
+                "token": "lacks",
+                "tag": "VBZ\r\n"
+            },
+            {
+                "token": "clarity",
+                "tag": "NN\r\n"
+            }
+        ]
+    },
+    {
+        "reviewID": "5",
+        "userID": "5",
+        "productID": "3",
+        "Sentence": [
+            "Processor is of excellent quality and is fast.",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "Processor",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "of",
+                "tag": "IN"
+            },
+            {
+                "token": "excellent",
+                "tag": "JJ\r\n"
+            },
+            {
+                "token": "quality",
+                "tag": "NN"
+            },
+            {
+                "token": "and",
+                "tag": "CC"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "fast.",
+                "tag": "RB"
+            }
+        ]
+    },
+    {
+        "reviewID": "6",
+        "userID": "3",
+        "productID": "9",
+        "Sentence": [
+            "Samsung star lacks a good camera and perhaps can make improvement in the sound quality as well",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "Samsung",
+                "tag": "NNP\r\n"
+            },
+            {
+                "token": "star",
+                "tag": "NN"
+            },
+            {
+                "token": "lacks",
+                "tag": "VBZ\r\n"
+            },
+            {
+                "token": "a",
+                "tag": "DT"
+            },
+            {
+                "token": "good",
+                "tag": "JJ"
+            },
+            {
+                "token": "camera",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "and",
+                "tag": "CC"
+            },
+            {
+                "token": "perhaps",
+                "tag": "RB\r\n"
+            },
+            {
+                "token": "can",
+                "tag": "MD"
+            },
+            {
+                "token": "make",
+                "tag": "VB"
+            },
+            {
+                "token": "improvement",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "in",
+                "tag": "IN"
+            },
+            {
+                "token": "the",
+                "tag": "DT"
+            },
+            {
+                "token": "sound",
+                "tag": "NN"
+            },
+            {
+                "token": "quality",
+                "tag": "NN"
+            },
+            {
+                "token": "as",
+                "tag": "IN"
+            },
+            {
+                "token": "well",
+                "tag": "RB"
+            }
+        ]
+    },
+    {
+        "reviewID": "7",
+        "userID": "3",
+        "productID": "3",
+        "Sentence": [
+            "Its a very good iPhone",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "Its",
+                "tag": "PRP$\r\n"
+            },
+            {
+                "token": "a",
+                "tag": "DT"
+            },
+            {
+                "token": "very",
+                "tag": "RB"
+            },
+            {
+                "token": "good",
+                "tag": "JJ"
+            },
+            {
+                "token": "iPhone",
+                "tag": "NN"
+            }
+        ]
+    },
+    {
+        "reviewID": "7",
+        "userID": "3",
+        "productID": "3",
+        "Sentence": [
+            "being i4s the processor is not better than I5 but still it is quite fast",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "being",
+                "tag": "VBG"
+            },
+            {
+                "token": "i4s",
+                "tag": "NNS"
+            },
+            {
+                "token": "the",
+                "tag": "DT"
+            },
+            {
+                "token": "processor",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "not",
+                "tag": "RB\r\n"
+            },
+            {
+                "token": "better",
+                "tag": "JJR"
+            },
+            {
+                "token": "than",
+                "tag": "IN"
+            },
+            {
+                "token": "I5",
+                "tag": "NN"
+            },
+            {
+                "token": "but",
+                "tag": "CC"
+            },
+            {
+                "token": "still",
+                "tag": "RB"
+            },
+            {
+                "token": "it",
+                "tag": "PRP\r\n"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "quite",
+                "tag": "RB"
+            },
+            {
+                "token": "fast",
+                "tag": "RB"
+            }
+        ]
+    },
+    {
+        "reviewID": "7",
+        "userID": "3",
+        "productID": "3",
+        "Sentence": [
+            "Camera is great and is capable of taking high-quality pictures.",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "Camera",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "great",
+                "tag": "JJ"
+            },
+            {
+                "token": "and",
+                "tag": "CC"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "capable",
+                "tag": "JJ\r\n"
+            },
+            {
+                "token": "of",
+                "tag": "IN"
+            },
+            {
+                "token": "taking",
+                "tag": "VBG"
+            },
+            {
+                "token": "high",
+                "tag": "JJ"
+            },
+            {
+                "token": "quality",
+                "tag": "NN"
+            },
+            {
+                "token": "pictures.",
+                "tag": "NNS"
+            }
+        ]
+    },
+    {
+        "reviewID": "8",
+        "userID": "3",
+        "productID": "7",
+        "Sentence": [
+            "This phone has better sound quality but lacks strong body",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "This",
+                "tag": "DT"
+            },
+            {
+                "token": "phone",
+                "tag": "NN"
+            },
+            {
+                "token": "has",
+                "tag": "VBZ"
+            },
+            {
+                "token": "better",
+                "tag": "JJR"
+            },
+            {
+                "token": "sound",
+                "tag": "NN"
+            },
+            {
+                "token": "quality",
+                "tag": "NN"
+            },
+            {
+                "token": "but",
+                "tag": "CC"
+            },
+            {
+                "token": "lacks",
+                "tag": "VBZ\r\n"
+            },
+            {
+                "token": "strong",
+                "tag": "JJ"
+            },
+            {
+                "token": "body",
+                "tag": "NN\r\n"
+            }
+        ]
+    }
+]

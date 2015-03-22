@@ -22,8 +22,8 @@ class Opinion extends Object {
      */
     public function __construct()
     {
-        $this->addToIndex(__DIR__ . '/opinion/rt-polaritydata/rt-polarity.neg', 'neg');
-        $this->addToIndex(__DIR__ . '/opinion/rt-polaritydata/rt-polarity.pos', 'pos');
+        $this->addToIndex(__DIR__ . '/opinion/rt-polaritydataN/rt-polarity.neg', 'neg');
+        $this->addToIndex(__DIR__ . '/opinion/rt-polaritydataN/rt-polarity.pos', 'pos');
     }
 
     public function addToIndex($file, $class, $limit = 0) {

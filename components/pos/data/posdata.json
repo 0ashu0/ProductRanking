@@ -3,7 +3,7 @@
         "reviewID": "1",
         "userID": "1",
         "productID": "1",
-        "Sentence": [
+        "currentSentence": [
             "it is a good product",
             "pos"
         ]
@@ -12,7 +12,7 @@
         "reviewID": "1",
         "userID": "1",
         "productID": "1",
-        "Sentence": [
+        "currentSentence": [
             "best for those who just want basic functionalities.",
             "pos"
         ]
@@ -21,7 +21,7 @@
         "reviewID": "2",
         "userID": "1",
         "productID": "9",
-        "Sentence": [
+        "currentSentence": [
             "It has a good quality camera, and battery life is great too",
             "pos"
         ]
@@ -30,7 +30,7 @@
         "reviewID": "2",
         "userID": "1",
         "productID": "9",
-        "Sentence": [
+        "currentSentence": [
             "Quite difficult to hold as the phone size is big",
             "pos"
         ]
@@ -39,7 +39,7 @@
         "reviewID": "2",
         "userID": "1",
         "productID": "9",
-        "Sentence": [
+        "currentSentence": [
             "but big screen is good for video viewing.",
             "pos"
         ]
@@ -48,7 +48,7 @@
         "reviewID": "3",
         "userID": "1",
         "productID": "4",
-        "Sentence": [
+        "currentSentence": [
             "great phone",
             "pos"
         ]
@@ -57,7 +57,7 @@
         "reviewID": "3",
         "userID": "1",
         "productID": "4",
-        "Sentence": [
+        "currentSentence": [
             "It has excellent 12 MP camera and 1600 dpi screen",
             "pos"
         ]
@@ -66,7 +66,7 @@
         "reviewID": "3",
         "userID": "1",
         "productID": "4",
-        "Sentence": [
+        "currentSentence": [
             "sound quality is just excellent",
             "pos"
         ]
@@ -75,7 +75,7 @@
         "reviewID": "3",
         "userID": "1",
         "productID": "4",
-        "Sentence": [
+        "currentSentence": [
             "Screen size is good and the processor is fastest among others.",
             "pos"
         ]
@@ -84,7 +84,7 @@
         "reviewID": "4",
         "userID": "5",
         "productID": "4",
-        "Sentence": [
+        "currentSentence": [
             "it has an excellent Retina display",
             "pos"
         ]
@@ -93,7 +93,7 @@
         "reviewID": "4",
         "userID": "5",
         "productID": "4",
-        "Sentence": [
+        "currentSentence": [
             "battery life is not good but can be better",
             "pos"
         ]
@@ -102,7 +102,7 @@
         "reviewID": "4",
         "userID": "5",
         "productID": "4",
-        "Sentence": [
+        "currentSentence": [
             "The camera is great and has 12 MP",
             "pos"
         ]
@@ -111,7 +111,7 @@
         "reviewID": "5",
         "userID": "5",
         "productID": "3",
-        "Sentence": [
+        "currentSentence": [
             "Not better than apple i5 but still good",
             "pos"
         ]
@@ -120,7 +120,7 @@
         "reviewID": "5",
         "userID": "5",
         "productID": "3",
-        "Sentence": [
+        "currentSentence": [
             "The camera is better and the battery life is good as well",
             "pos"
         ]
@@ -129,7 +129,7 @@
         "reviewID": "5",
         "userID": "5",
         "productID": "3",
-        "Sentence": [
+        "currentSentence": [
             "sound quality is great but lacks clarity",
             "pos"
         ]
@@ -138,7 +138,7 @@
         "reviewID": "5",
         "userID": "5",
         "productID": "3",
-        "Sentence": [
+        "currentSentence": [
             "Processor is of excellent quality and is fast.",
             "pos"
         ]
@@ -147,7 +147,7 @@
         "reviewID": "6",
         "userID": "3",
         "productID": "9",
-        "Sentence": [
+        "currentSentence": [
             "Samsung star lacks a good camera and perhaps can make improvement in the sound quality as well",
             "pos"
         ]
@@ -156,7 +156,7 @@
         "reviewID": "7",
         "userID": "3",
         "productID": "3",
-        "Sentence": [
+        "currentSentence": [
             "Its a very good iPhone",
             "pos"
         ]
@@ -165,7 +165,7 @@
         "reviewID": "7",
         "userID": "3",
         "productID": "3",
-        "Sentence": [
+        "currentSentence": [
             "being i4s the processor is not better than I5 but still it is quite fast",
             "pos"
         ]
@@ -174,7 +174,7 @@
         "reviewID": "7",
         "userID": "3",
         "productID": "3",
-        "Sentence": [
+        "currentSentence": [
             "Camera is great and is capable of taking high-quality pictures.",
             "pos"
         ]
@@ -183,7 +183,7 @@
         "reviewID": "8",
         "userID": "3",
         "productID": "7",
-        "Sentence": [
+        "currentSentence": [
             "This phone has better sound quality but lacks strong body",
             "pos"
         ]

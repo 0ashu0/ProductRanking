@@ -3,7 +3,7 @@
         "reviewID": "4",
         "userID": "5",
         "productID": "4",
-        "Sentence": [
+        "currentSentence": [
             "The sound is ok but I use headphone.",
             "neg"
         ]
@@ -12,7 +12,7 @@
         "reviewID": "6",
         "userID": "3",
         "productID": "9",
-        "Sentence": [
+        "currentSentence": [
             "the body is not that good and is not hand friendly.",
             "neg"
         ]
@@ -21,7 +21,7 @@
         "reviewID": "8",
         "userID": "3",
         "productID": "7",
-        "Sentence": [
+        "currentSentence": [
             "overall battery life is ok and works till 36 hours without charging.",
             "neg"
         ]
