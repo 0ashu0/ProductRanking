@@ -1,0 +1,191 @@
+[
+    {
+        "reviewID": "1",
+        "userID": "1",
+        "productID": "1",
+        "Sentence": "it is a very good product",
+        "sentenceWeight": 0.023154356520904
+    },
+    {
+        "reviewID": "1",
+        "userID": "1",
+        "productID": "1",
+        "Sentence": "best for those who just want basic functionalities.",
+        "sentenceWeight": 0.8
+    },
+    {
+        "reviewID": "2",
+        "userID": "1",
+        "productID": "9",
+        "Sentence": "It has a good quality camera, and battery life is great too",
+        "sentenceWeight": 0.066535986231514
+    },
+    {
+        "reviewID": "2",
+        "userID": "1",
+        "productID": "9",
+        "Sentence": "Quite difficult to hold as the phone size is big",
+        "sentenceWeight": 0.4
+    },
+    {
+        "reviewID": "2",
+        "userID": "1",
+        "productID": "9",
+        "Sentence": "but big screen is good for video viewing.",
+        "sentenceWeight": 0.2231543565209
+    },
+    {
+        "reviewID": "3",
+        "userID": "1",
+        "productID": "4",
+        "Sentence": "great phone",
+        "sentenceWeight": 0.04338162971061
+    },
+    {
+        "reviewID": "3",
+        "userID": "1",
+        "productID": "4",
+        "Sentence": "It has excellent 12 MP camera and 1600 dpi screen",
+        "sentenceWeight": 0.0704629075244
+    },
+    {
+        "reviewID": "3",
+        "userID": "1",
+        "productID": "4",
+        "Sentence": "sound quality is just excellent",
+        "sentenceWeight": 0.0704629075244
+    },
+    {
+        "reviewID": "3",
+        "userID": "1",
+        "productID": "4",
+        "Sentence": "Screen size is good and the processor is fastest among others.",
+        "sentenceWeight": 0.6231543565209
+    },
+    {
+        "reviewID": "4",
+        "userID": "5",
+        "productID": "4",
+        "Sentence": "it has an excellent Retina display",
+        "sentenceWeight": 0.0704629075244
+    },
+    {
+        "reviewID": "4",
+        "userID": "5",
+        "productID": "4",
+        "Sentence": "battery life is not good but can be better",
+        "sentenceWeight": 0.1640801715697
+    },
+    {
+        "reviewID": "4",
+        "userID": "5",
+        "productID": "4",
+        "Sentence": "The camera is great and has 12 MP",
+        "sentenceWeight": 0.04338162971061
+    },
+    {
+        "reviewID": "5",
+        "userID": "5",
+        "productID": "3",
+        "Sentence": "Not better than apple i5 but still good",
+        "sentenceWeight": 0.1640801715697
+    },
+    {
+        "reviewID": "5",
+        "userID": "5",
+        "productID": "3",
+        "Sentence": "The camera is better and the battery life is good as well",
+        "sentenceWeight": 0.1640801715697
+    },
+    {
+        "reviewID": "5",
+        "userID": "5",
+        "productID": "3",
+        "Sentence": "sound quality is great but lacks clarity",
+        "sentenceWeight": 0.04338162971061
+    },
+    {
+        "reviewID": "5",
+        "userID": "5",
+        "productID": "3",
+        "Sentence": "Processor is of excellent quality and is fast.",
+        "sentenceWeight": 0.0704629075244
+    },
+    {
+        "reviewID": "6",
+        "userID": "3",
+        "productID": "9",
+        "Sentence": "Samsung star lacks a good camera and perhaps can make improvement in the sound quality as well",
+        "sentenceWeight": 0.023154356520904
+    },
+    {
+        "reviewID": "7",
+        "userID": "3",
+        "productID": "3",
+        "Sentence": "Its a very good iPhone",
+        "sentenceWeight": 0.023154356520904
+    },
+    {
+        "reviewID": "7",
+        "userID": "3",
+        "productID": "3",
+        "Sentence": "being i4s the processor is not better than I5 but still it is quite fast",
+        "sentenceWeight": 0.1409258150488
+    },
+    {
+        "reviewID": "7",
+        "userID": "3",
+        "productID": "3",
+        "Sentence": "Camera is great and is capable of taking high-quality pictures.",
+        "sentenceWeight": 0.44338162971061
+    },
+    {
+        "reviewID": "8",
+        "userID": "3",
+        "productID": "7",
+        "Sentence": "This phone has better sound quality but lacks strong body",
+        "sentenceWeight": 0.3409258150488
+    },
+    {
+        "reviewID": "9",
+        "userID": "1",
+        "productID": "2",
+        "Sentence": "Xolo products have better camera quality",
+        "sentenceWeight": 0.1409258150488
+    },
+    {
+        "reviewID": "9",
+        "userID": "1",
+        "productID": "2",
+        "Sentence": "and the built quality is great as well",
+        "sentenceWeight": 0.04338162971061
+    },
+    {
+        "reviewID": "10",
+        "userID": "1",
+        "productID": "5",
+        "Sentence": "good phone with excellent battery life.",
+        "sentenceWeight": 0.093617264045304
+    },
+    {
+        "reviewID": "11",
+        "userID": "6",
+        "productID": "6",
+        "Sentence": "the video quality is great too.",
+        "sentenceWeight": 0.04338162971061
+    },
+    {
+        "reviewID": "12",
+        "userID": "6",
+        "productID": "8",
+        "Sentence": "Cheapest phone among others",
+        "sentenceWeight": 0
+    },
+    {
+        "reviewID": "12",
+        "userID": "6",
+        "productID": "8",
+        "Sentence": "the battery life is excellent",
+        "sentenceWeight": 0.0704629075244
+    }
+]

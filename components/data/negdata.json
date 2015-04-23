@@ -3,6 +3,7 @@
         "reviewID": "4",
         "userID": "5",
         "productID": "4",
+        "review": "it has an excellent Retina display. battery life is not good but can be better. The camera is great and has 12 MP. The sound is ok but I use headphone.",
         "Sentence": [
             "The sound is ok but I use headphone.",
             "neg"
@@ -12,6 +13,7 @@
         "reviewID": "6",
         "userID": "3",
         "productID": "9",
+        "review": "Samsung star lacks a good camera and perhaps can make improvement in the sound quality as well. the body is not that good and is not hand friendly.",
         "Sentence": [
             "the body is not that good and is not hand friendly.",
             "neg"
@@ -21,8 +23,19 @@
         "reviewID": "8",
         "userID": "3",
         "productID": "7",
+        "review": "This phone has better sound quality but lacks strong body. overall battery life is ok and works till 36 hours without charging.",
         "Sentence": [
             "overall battery life is ok and works till 36 hours without charging.",
+            "neg"
+        ]
+    },
+    {
+        "reviewID": "11",
+        "userID": "6",
+        "productID": "6",
+        "review": "Moto E has good large screen. the video quality is great too.",
+        "Sentence": [
+            "Moto E has good large screen",
             "neg"
         ]
     }

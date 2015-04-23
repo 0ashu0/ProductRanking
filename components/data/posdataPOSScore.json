@@ -4,7 +4,7 @@
         "userID": "1",
         "productID": "1",
         "Sentence": [
-            "it is a good product",
+            "it is a very good product",
             "pos"
         ],
         "posArray": [
@@ -21,6 +21,10 @@
                 "tag": "DT"
             },
             {
+                "token": "very",
+                "tag": "RB"
+            },
+            {
                 "token": "good",
                 "tag": "JJ"
             },
@@ -29,7 +33,12 @@
                 "tag": "NN\r\n"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "good",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "1",
@@ -73,7 +82,16 @@
                 "tag": "NNS"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "best",
+                0.6
+            ],
+            [
+                "basic",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "2",
@@ -133,7 +151,16 @@
                 "tag": "RB\r\n"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "good",
+                0.2
+            ],
+            [
+                "great",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "2",
@@ -185,7 +212,16 @@
                 "tag": "JJ"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "difficult",
+                0.2
+            ],
+            [
+                "big",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "2",
@@ -229,7 +265,16 @@
                 "tag": "VBG"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "big",
+                0.2
+            ],
+            [
+                "good",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "3",
@@ -249,7 +294,12 @@
                 "tag": "NN"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "great",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "3",
@@ -301,7 +351,12 @@
                 "tag": "NN"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "excellent",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "3",
@@ -333,7 +388,12 @@
                 "tag": "JJ\r\n"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "excellent",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "3",
@@ -389,7 +449,16 @@
                 "tag": "NNS\r\n"
             }
         ],
-        "sentenceScore": 3
+        "posScoreArray": [
+            [
+                "good",
+                0.2
+            ],
+            [
+                "fastest",
+                0.6
+            ]
+        ]
     },
     {
         "reviewID": "4",
@@ -425,7 +494,12 @@
                 "tag": "NN"
             }
         ],
-        "sentenceScore": 3
+        "posScoreArray": [
+            [
+                "excellent",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "4",
@@ -473,7 +547,16 @@
                 "tag": "JJR"
             }
         ],
-        "sentenceScore": 2
+        "posScoreArray": [
+            [
+                "good",
+                0.2
+            ],
+            [
+                "better",
+                0.4
+            ]
+        ]
     },
     {
         "reviewID": "4",
@@ -517,7 +600,12 @@
                 "tag": "NNP\r\n"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "great",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "5",
@@ -561,7 +649,16 @@
                 "tag": "JJ"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "better",
+                0.4
+            ],
+            [
+                "good",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "5",
@@ -621,7 +718,16 @@
                 "tag": "RB"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "better",
+                0.4
+            ],
+            [
+                "good",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "5",
@@ -661,7 +767,12 @@
                 "tag": "NN\r\n"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "great",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "5",
@@ -705,7 +816,12 @@
                 "tag": "RB"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "excellent",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "6",
@@ -785,7 +901,12 @@
                 "tag": "RB"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "good",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "7",
@@ -817,7 +938,12 @@
                 "tag": "NN"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "good",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "7",
@@ -889,7 +1015,12 @@
                 "tag": "RB"
             }
         ],
-        "sentenceScore": 2
+        "posScoreArray": [
+            [
+                "better",
+                0.4
+            ]
+        ]
     },
     {
         "reviewID": "7",
@@ -945,7 +1076,20 @@
                 "tag": "NNS"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "great",
+                0.2
+            ],
+            [
+                "capable",
+                0.2
+            ],
+            [
+                "high",
+                0.2
+            ]
+        ]
     },
     {
         "reviewID": "8",
@@ -997,6 +1141,258 @@
                 "tag": "NN\r\n"
             }
         ],
-        "sentenceScore": 1
+        "posScoreArray": [
+            [
+                "better",
+                0.4
+            ],
+            [
+                "strong",
+                0.2
+            ]
+        ]
+    },
+    {
+        "reviewID": "9",
+        "userID": "1",
+        "productID": "2",
+        "Sentence": [
+            "Xolo products have better camera quality",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "Xolo",
+                "tag": "NN"
+            },
+            {
+                "token": "products",
+                "tag": "NNS\r\n"
+            },
+            {
+                "token": "have",
+                "tag": "VBP"
+            },
+            {
+                "token": "better",
+                "tag": "JJR"
+            },
+            {
+                "token": "camera",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "quality",
+                "tag": "NN"
+            }
+        ],
+        "posScoreArray": [
+            [
+                "better",
+                0.4
+            ]
+        ]
+    },
+    {
+        "reviewID": "9",
+        "userID": "1",
+        "productID": "2",
+        "Sentence": [
+            "and the built quality is great as well",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "and",
+                "tag": "CC"
+            },
+            {
+                "token": "the",
+                "tag": "DT"
+            },
+            {
+                "token": "built",
+                "tag": "VBN"
+            },
+            {
+                "token": "quality",
+                "tag": "NN"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "great",
+                "tag": "JJ"
+            },
+            {
+                "token": "as",
+                "tag": "IN"
+            },
+            {
+                "token": "well",
+                "tag": "RB"
+            }
+        ],
+        "posScoreArray": [
+            [
+                "great",
+                0.2
+            ]
+        ]
+    },
+    {
+        "reviewID": "10",
+        "userID": "1",
+        "productID": "5",
+        "Sentence": [
+            "good phone with excellent battery life.",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "good",
+                "tag": "JJ"
+            },
+            {
+                "token": "phone",
+                "tag": "NN"
+            },
+            {
+                "token": "with",
+                "tag": "IN"
+            },
+            {
+                "token": "excellent",
+                "tag": "JJ\r\n"
+            },
+            {
+                "token": "battery",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "life.",
+                "tag": "NN"
+            }
+        ],
+        "posScoreArray": [
+            [
+                "good",
+                0.2
+            ],
+            [
+                "excellent",
+                0.2
+            ]
+        ]
+    },
+    {
+        "reviewID": "11",
+        "userID": "6",
+        "productID": "6",
+        "Sentence": [
+            "the video quality is great too.",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "the",
+                "tag": "DT"
+            },
+            {
+                "token": "video",
+                "tag": "NN"
+            },
+            {
+                "token": "quality",
+                "tag": "NN"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "great",
+                "tag": "JJ"
+            },
+            {
+                "token": "too.",
+                "tag": "RB\r\n"
+            }
+        ],
+        "posScoreArray": [
+            [
+                "great",
+                0.2
+            ]
+        ]
+    },
+    {
+        "reviewID": "12",
+        "userID": "6",
+        "productID": "8",
+        "Sentence": [
+            "Cheapest phone among others",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "Cheapest",
+                "tag": "JJS\r\n"
+            },
+            {
+                "token": "phone",
+                "tag": "NN"
+            },
+            {
+                "token": "among",
+                "tag": "IN\r\n"
+            },
+            {
+                "token": "others",
+                "tag": "NNS\r\n"
+            }
+        ],
+        "posScoreArray": [
+
+        ]
+    },
+    {
+        "reviewID": "12",
+        "userID": "6",
+        "productID": "8",
+        "Sentence": [
+            "the battery life is excellent",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "the",
+                "tag": "DT"
+            },
+            {
+                "token": "battery",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "life",
+                "tag": "NN"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "excellent",
+                "tag": "JJ\r\n"
+            }
+        ],
+        "posScoreArray": [
+            [
+                "excellent",
+                0.2
+            ]
+        ]
     }
 ]

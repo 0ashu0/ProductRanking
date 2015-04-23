@@ -1,0 +1,52 @@
+[
+    {
+        "productID": "1",
+        "name": "nokia",
+        "price": "10000"
+    },
+    {
+        "productID": "2",
+        "name": "xolo ",
+        "price": "12000"
+    },
+    {
+        "productID": "3",
+        "name": "Apple i4S",
+        "price": "35000"
+    },
+    {
+        "productID": "4",
+        "name": "Apple I5",
+        "price": "35000"
+    },
+    {
+        "productID": "5",
+        "name": "Galaxy Y",
+        "price": "7000"
+    },
+    {
+        "productID": "6",
+        "name": "Moto E",
+        "price": "12000"
+    },
+    {
+        "productID": "7",
+        "name": "Moto K",
+        "price": "12000"
+    },
+    {
+        "productID": "8",
+        "name": "Moto G",
+        "price": "10000"
+    },
+    {
+        "productID": "9",
+        "name": "Samsung Star",
+        "price": "15000"
+    },
+    {
+        "productID": "10",
+        "name": "Samsung Note",
+        "price": "35000"
+    }
+]

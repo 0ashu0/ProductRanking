@@ -9,6 +9,8 @@ require(__DIR__ . '/../../components/pos/POSTag.php');
 use Yii;
 use frontend\models\Review;
 use frontend\models\ReviewSearch;
+use frontend\models\Product;
+use frontend\models\ProductSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -167,6 +169,15 @@ class ReviewController extends Controller
 //            ->asArray()
 //            ->all();
 
+        $query = 'SELECT * FROM product';
+        $reviewsP = Review::findBySql($query)
+            ->asArray()
+            ->all();
+
+        $storeDataP = json_encode($reviewsP, JSON_PRETTY_PRINT);
+        $file = './../../components/data/product.json';
+        file_put_contents($file, $storeDataP);
+
         $query = 'SELECT * FROM review';
         $reviews = Review::findBySql($query)
             ->asArray()
@@ -242,6 +253,7 @@ class ReviewController extends Controller
                         'reviewID' => $reviewID,
                         'userID' => $userID,
                         'productID' => $productID,
+                        'review' => $review,
                         'Sentence' => $currentSentence
                     );
 
@@ -310,10 +322,12 @@ class ReviewController extends Controller
 
 // echo '<pre>', var_dump($jsonDecode), '<pre/>';
 
-        foreach ($jsonDecode as $array) {
+        foreach ($jsonDecode as $array)
+        {
             $userID = $array['userID'];
             $reviewID = $array['reviewID'];
             $productID = $array['productID'];
+            $review = $array['review'];
             $currentSentence = $array['Sentence'];
 
             $po = $array['Sentence']['0'];
@@ -323,6 +337,7 @@ class ReviewController extends Controller
                 'reviewID' => $reviewID,
                 'userID' => $userID,
                 'productID' => $productID,
+                'review' => $review,
                 'Sentence' => $currentSentence,
                 'posArray' => $posArray
             );
@@ -342,82 +357,7 @@ class ReviewController extends Controller
 
         return $this->render('pos',
             [
-
-            ]
-        );
-    }
-
-    public function actionPoscore()
-    {
-//        $answer = array();
-//        $answerArray = array();
-        $adjectiveScore = 0;
-
-        $jsonPosFileP = './../../components/data/posdataPOS.json';
-
-        $jsonPosFilePScore = './../../components/data/posdataPOSScore.json';
-
-//        $adjectives = './../../components/data/adj_db.json';
-
-        $jsonContent = file_get_contents($jsonPosFileP);
-        $jsonDecode = json_decode($jsonContent, TRUE);
-
-        $bigArray = array ();
-        foreach ($jsonDecode as $array)
-        {
-            $userID = $array['userID'];
-            $reviewID = $array['reviewID'];
-            $productID = $array['productID'];
-            $currentSentence = $array['Sentence'];
-            $posArray = $array['posArray'];
-//            echo '<pre>', var_dump($posArray), '<pre/>';
-
-            foreach($posArray as $tags)
-            {
-                foreach($tags as $key => $value)
-                {
-                    if($key == 'tag')
-                    {
-                        if ($value == 'JJ')
-                            $adjectiveScore = 1;
-                        if ($value == 'JJR')
-                            $adjectiveScore = 2;
-                        if ($value == 'JJS')
-                            $adjectiveScore = 3;
-                    }
-                }
-//                if($tags['tag']=='JJ' || $tags['tag'] == 'JJR' || $tags['tag']== 'JJS')
-//                {
-//                    $answer = $tags['token'];
-//                    if (!(in_array($answer, $answerArray)))
-//                        $answerArray[] = $answer;
-//                }
-            }
-
-                $currentArray = array(
-                    'reviewID' => $reviewID,
-                    'userID' => $userID,
-                    'productID' => $productID,
-                    'Sentence' => $currentSentence,
-                    'posArray' => $posArray,
-                    'sentenceScore' => $adjectiveScore
-                );
-                $bigArray[] = $currentArray;
-
-        }
-
-        $json = json_encode($bigArray, JSON_PRETTY_PRINT);
-//        $json2 = json_encode($answerArray, JSON_PRETTY_PRINT);
-        file_put_contents($jsonPosFilePScore,$json);
-//        file_put_contents($adjectives, $json2);
-        unset($jsonPosFileP);
-        unset($jsonContent);
-        unset($jsonDecode);
-        unset($json);
-
-        return $this->render('poscore',
-            [
-
+                'bigArray' => $bigArray,
             ]
         );
     }
@@ -426,7 +366,7 @@ class ReviewController extends Controller
     {
         $answer = array();
         $answerArray = array();
-        $jsonPosFilePScore = './../../components/data/posdataPOSScore.json';
+        $jsonPosFilePScore = './../../components/data/posdataPOS.json';
         $adjectives = './../../components/data/adj_db.json';
         $jsonContent = file_get_contents($jsonPosFilePScore);
         $jsonDecode = json_decode($jsonContent, TRUE);
@@ -438,31 +378,18 @@ class ReviewController extends Controller
             $productID = $array['productID'];
             $currentSentence = $array['Sentence'];
             $posArray = $array['posArray'];
-            $sentenceScore = $array['sentenceScore'];
 
 //            echo '<pre>', var_dump($posArray), '<pre/>';
 
             foreach($posArray as $tags)
             {
-                if($tags['tag']=='JJ' || $tags['tag'] == 'JJR' || $tags['tag']== 'JJS')
+                if($tags['tag']=="JJ" || $tags['tag']=="JJ\r\n" || $tags['tag'] == "JJR" || $tags['tag']== "JJS")
                 {
                     $answer = $tags['token'];
                     if (!(in_array($answer, $answerArray)))
                         $answerArray[] = $answer;
                 }
             }
-
-//            $answerArray = array_unique($answerArray);
-
-//            $currentArray = array(
-//                'reviewID' => $reviewID,
-//                'userID' => $userID,
-//                'productID' => $productID,
-//                'Sentence' => $currentSentence,
-//                'posArray' => $posArray,
-//                'sentenceScore' => $sentenceScore
-//            );
-//            $bigArray[] = $currentArray;
 
         }
 
@@ -481,57 +408,437 @@ class ReviewController extends Controller
         );
     }
 
-    public function actionIdfcr()
+    public function actionPoscore()
     {
-        $bigArray = array ();
+        $posScore = array();
 
-        /*****************************************/
-//        $answer = array();
-//        $answerArray = array();
         $adjectiveScore = 0;
+
+        $jsonPosFileP = './../../components/data/posdataPOS.json';
 
         $jsonPosFilePScore = './../../components/data/posdataPOSScore.json';
 
-        $adjectives = './../../components/data/adj_db.json';
+//        $adjectives = './../../components/data/adj_db.json';
 
-        $jsonPosContent = file_get_contents($jsonPosFilePScore);
-        $jsonPosDecode = json_decode($jsonPosContent, TRUE);
+        $jsonContent = file_get_contents($jsonPosFileP);
+        $jsonDecode = json_decode($jsonContent, TRUE);
 
-        $jsonAdjContent = file_get_contents($adjectives);
-        $jsonAdjDecode = json_decode($jsonAdjContent, TRUE);
-
-        foreach($jsonAdjDecode as $adj)
+        $bigArray = array ();
+        foreach ($jsonDecode as $array)
         {
-            $counter = 0;
-            foreach($jsonPosDecode as $array)
-            {
-                $reviewID = $array['reviewID'];
-                $sentence = $array['Sentence'];
+            $posScoreArray = array();
+            $userID = $array['userID'];
+            $reviewID = $array['reviewID'];
+            $productID = $array['productID'];
+            $currentSentence = $array['Sentence'];
+            $posArray = $array['posArray'];
+//            echo '<pre>', var_dump($posArray), '<pre/>';
 
-                if(in_array($adj, $sentence)
+            // this is one tags array
+            foreach($posArray as $tags)
+            {
+                // this is one tags key value pair
+                foreach($tags as $key => $value)
                 {
-                    //do something
-                    $counter = $counter + 1;
-                    echo " counter " . $counter;
+                    if($key == 'tag')
+                    {
+                        if ($value == "JJ" || $value == "JJ\r\n")
+                        {
+                            $posScore = array($tags['token'], 0.2);
+                            $posScoreArray[] = $posScore;
+                            unset($posScore);
+                        }
+                        else if ($value == "JJR")
+                        {
+                            $posScore = array($tags['token'], 0.4);
+                            $posScoreArray[] = $posScore;
+                            unset($posScore);
+                        }
+                        else if ($value == "JJS")
+                        {
+                            $posScore = array($tags['token'], 0.6);
+                            $posScoreArray[] = $posScore;
+                            unset($posScore);
+                        }
+                    }
                 }
             }
 
-            $adjArray = array(
-                'adj' => $adj,
-                'CR' => $counter
-                );
+            $currentArray = array(
+                'reviewID' => $reviewID,
+                'userID' => $userID,
+                'productID' => $productID,
+                'Sentence' => $currentSentence,
+                'posArray' => $posArray,
+                'posScoreArray' => $posScoreArray
+            );
+            $bigArray[] = $currentArray;
 
-            $bigArray[] = $adjArray;
-
-//            var_dump($bigArray);
+            unset($posScoreArray);
         }
 
-        /*****************************************/
+        $json = json_encode($bigArray, JSON_PRETTY_PRINT);
+//        $json2 = json_encode($answerArray, JSON_PRETTY_PRINT);
+        file_put_contents($jsonPosFilePScore,$json);
+//        file_put_contents($adjectives, $json2);
+        unset($jsonPosFileP);
+        unset($jsonContent);
+        unset($jsonDecode);
+        unset($json);
 
-        return $this->render('idfcr',
+        return $this->render('poscore',
+            [
+                'bigArray' => $bigArray,
+            ]
+        );
+    }
+
+    public function actionIdfcr()
+     {
+         $bigArray = array ();
+         $counter = 0;
+
+         /*****************************************/
+ //        $answer = array();
+ //        $answerArray = array();
+         $adjectiveScore = 0;
+
+         $jsonPosFilePScore = './../../components/data/data.json';
+
+         $adjectives = './../../components/data/adj_db.json';
+
+         $ReviewFile = './../../components/data/expand.json';
+
+         /* output */
+         $adjectiveCounter = './../../components/data/adj_db_counter.json';
+
+         $jsonPosContent = file_get_contents($jsonPosFilePScore);
+         $jsonPosDecode = json_decode($jsonPosContent, TRUE);
+
+         $jsonAdjContent = file_get_contents($adjectives);
+         $jsonAdjDecode = json_decode($jsonAdjContent, TRUE);
+
+         $jsonReviewContent = file_get_contents($ReviewFile);
+         $jsonReviewDecode = json_decode($jsonReviewContent, TRUE);
+
+         $count = 0;
+         foreach($jsonReviewDecode as $review)
+         {
+             $count = $count + 1;
+             echo $count;
+         }
+
+         foreach($jsonAdjDecode as $adj)
+         {
+             $counter = 0;
+             foreach($jsonPosDecode as $array)
+             {
+                 $idf = 0;
+                 $reviewID = $array['reviewID'];
+                 $sentence = $array['review'];
+
+                 if (strpos($sentence,$adj) !== false)
+                 {
+//                     echo "hit found";
+                     $counter = $counter + 1;
+//                     echo $counter . "inside";
+                 }
+             }
+
+             $idf = log10($count/$counter) * 1/log10($count);
+             echo $idf;
+//             echo $counter;
+
+             $adjArray = array(
+                 'adj' => $adj,
+                 'CR' => $counter,
+                 'TR' => $count,
+                 'IDF' => $idf
+                 );
+
+             $bigArray[] = $adjArray;
+
+//             echo '<pre>', var_dump($bigArray), '<pre/>';
+         }
+
+         $json = json_encode($bigArray, JSON_PRETTY_PRINT);
+         file_put_contents($adjectiveCounter,$json);
+
+         /*****************************************/
+
+         return $this->render('idfcr',
+             [
+                 'bigArray' => $bigArray,
+             ]
+         );
+     }
+
+    public function actionSentence()
+    {
+        $jsonPosFilePScore = './../../components/data/posdataPOSScore.json';
+        $adjectiveCounter = './../../components/data/adj_db_counter.json';
+        $posdataSentence = './../../components/data/posdataSentence.json';
+
+        $jsonContent = file_get_contents($jsonPosFilePScore);
+        $jsonDecode = json_decode($jsonContent, TRUE);
+
+        $jsonAdjContent = file_get_contents($adjectiveCounter);
+        $jsonAdjDecode = json_decode($jsonAdjContent, TRUE);
+
+        $bigArray = array ();
+        foreach($jsonDecode as $array)
+        {
+            $userID = $array['userID'];
+            $reviewID = $array['reviewID'];
+            $productID = $array['productID'];
+            $sentence = $array['Sentence']['0'];
+            $posScoreArray = $array['posScoreArray'];
+
+//            echo '<pre>', var_dump($sentence), '<pre/>';
+//            echo '<pre>', var_dump($posScoreArray), '<pre/>';
+//            echo '<pre>', var_export($jsonAdjDecode), '<pre/>';
+
+            $eval = 0;
+            foreach($posScoreArray as $adjective)
+            {
+
+                foreach($jsonAdjDecode as $matches)
+                {
+                    if($adjective['0'] == $matches['adj'])
+                    {
+//                        echo "true";
+                        $eval = $eval +  $adjective['1'] * $matches['IDF'];
+                    }
+                }
+            }
+//            echo $eval;
+//            echo '<br>';
+
+            $currentArray = array(
+                'reviewID' => $reviewID,
+                'userID' => $userID,
+                'productID' => $productID,
+                'Sentence' => $sentence,
+                'sentenceWeight' => $eval
+            );
+            $bigArray[] = $currentArray;
+        }
+
+        $json = json_encode($bigArray, JSON_PRETTY_PRINT);
+        file_put_contents($posdataSentence,$json);
+
+        return $this->render('sentence',
             [
 
             ]
         );
     }
+
+    public function actionSentencewt()
+    {
+        $posdataSentence = './../../components/data/posdataSentence.json';
+        $posdataSentencewt = './../../components/data/posdataSentencewt.json';
+
+        $jsonContent = file_get_contents($posdataSentence);
+        $jsonDecode = json_decode($jsonContent, TRUE);
+
+        $bigArray = array();
+        $value = 1;
+        $reviewWeight = 0;
+        foreach ($jsonDecode as $array) {
+            $userID = $array['userID'];
+            $reviewID = $array['reviewID'];
+            $productID = $array['productID'];
+            $sentence = $array['Sentence'];
+            $sentenceWeight = $array['sentenceWeight'];
+
+            if ($reviewID != $value) {
+                $value = $value + 1;
+                $reviewWeight = 0;
+            }
+
+            $reviewWeight = $reviewWeight + $sentenceWeight;
+
+            $currentArray = array(
+                'reviewID' => $reviewID,
+                'userID' => $userID,
+                'productID' => $productID,
+                'Sentence' => $sentence,
+                'reviewWeight' => $reviewWeight
+            );
+            $bigArray[] = $currentArray;
+        }
+
+        $json = json_encode($bigArray, JSON_PRETTY_PRINT);
+        file_put_contents($posdataSentencewt, $json);
+
+        return $this->render('sentence',
+            [
+
+            ]
+        );
+    }
+
+    public function actionReviewwt()
+    {
+        $currentArray = array();
+        $bigArray = array();
+        $posdataSentencewt = './../../components/data/posdataSentencewt.json';
+
+        $reviewWeightFile = './../../components/data/reviewWeightFile.json';
+
+        $jsonContent = file_get_contents($posdataSentencewt);
+        $jsonDecode = json_decode($jsonContent, TRUE);
+
+        $maxID = 0;
+        foreach($jsonDecode as $array)
+        {
+            $reviewID = $array['reviewID'];
+            if($maxID < $reviewID)
+                $maxID = $reviewID;
+        }
+
+        $a=0;
+        $i=1;
+
+        for($i=1;$i<=$maxID;$i++)
+        {
+            $a=0;
+            foreach ($jsonDecode as $array)
+            {
+                $userID = $array['userID'];
+                $reviewID = $array['reviewID'];
+                $productID = $array['productID'];
+                $sentence = $array['Sentence'];
+                $reviewWeight = $array['reviewWeight'];
+
+                foreach ($array as $entries) {
+                    if ($entries == $reviewWeight && $reviewID == $i && $entries > $a)
+                    {
+                        $a = $entries;
+                        $currentArray = array(
+                            'reviewID' => $reviewID,
+                            'userID' => $userID,
+                            'productID' => $productID,
+                            'reviewWeight' => $a
+                        );
+                    }
+                }
+                //   echo $a;
+            }
+            $bigArray[] = $currentArray;
+            echo "something";
+            echo $a;
+            echo '<br>';
+        }
+
+        var_dump($bigArray);
+
+        $json = json_encode($bigArray, JSON_PRETTY_PRINT);
+        file_put_contents($reviewWeightFile, $json);
+
+        return $this->render('sentence',
+            [
+
+            ]
+        );
+    }
+
+    public function actionProduct()
+    {
+        $reviewWeightFile = './../../components/data/reviewWeightFile.json';
+
+        $productRank = './../../components/data/productRank.json';
+
+        $jsonContent = file_get_contents($reviewWeightFile);
+        $jsonDecode = json_decode($jsonContent, TRUE);
+
+        $max = 4;
+        foreach($jsonDecode as $array)
+        {
+            $productID = $array['productID'];
+            if($max<$productID)
+                $max = $productID;
+        }
+        $bigArray = array();
+        for($i=1;$i<=$max;$i++)
+        {
+            $score = 0;
+            foreach($jsonDecode as $array)
+            {
+                $productID = $array['productID'];
+                $reviewWeight = $array['reviewWeight'];
+
+                if($productID == $i)
+                {
+                    $score = $score + $reviewWeight;
+                }
+            }
+//            echo $i;
+//            echo '<br>';
+//            echo $score;
+//            echo '<br>';
+            $currentArray = array(
+                'productRank' => $score,
+                'productID' => $i
+            );
+            $bigArray[] = $currentArray;
+        }
+        /*
+         * descending logic here
+         */
+
+        arsort($bigArray);
+
+//        echo '<pre>', var_export($bigArray), '<pre/>';
+        $json = json_encode($bigArray, JSON_PRETTY_PRINT);
+        file_put_contents($productRank, $json);
+
+        return $this->render('sentence',
+            [
+
+            ]
+        );
+    }
+
+    public function actionResult()
+    {
+        $array;
+        $bigArray = array();
+        $dataFile = './../../components/data/product.json';
+        $dataContent = file_get_contents($dataFile);
+        $dataDecode = json_decode($dataContent, TRUE);
+
+        $productRank = './../../components/data/productRank.json';
+        $productContent = file_get_contents($productRank);
+        $productDecode = json_decode($productContent, TRUE);
+
+        foreach($productDecode as $product)
+        {
+            $productRank = $product['productRank'];
+            $productID = $product['productID'];
+
+            foreach($dataDecode as $entry)
+            {
+                $prodID = $entry['productID'];
+                $prodName = $entry['name'];
+                $prodPrice = $entry['price'];
+
+                if($productID == $prodID)
+                {
+                    $array = array($prodID, $prodName, $prodPrice);
+                }
+            }
+            $bigArray[] = $array;
+        }
+
+//        var_export($bigArray);
+
+        return $this->render('result',
+            [
+                'bigArray' => $bigArray,
+            ]
+        );
+    }
 }
+

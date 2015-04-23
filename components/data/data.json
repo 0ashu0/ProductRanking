@@ -3,7 +3,7 @@
         "reviewID": "1",
         "userID": "1",
         "productID": "1",
-        "review": "it is a good product. best for those who just want basic functionalities."
+        "review": "it is a very good product. best for those who just want basic functionalities."
     },
     {
         "reviewID": "2",
@@ -46,5 +46,29 @@
         "userID": "3",
         "productID": "7",
         "review": "This phone has better sound quality but lacks strong body. overall battery life is ok and works till 36 hours without charging."
+    },
+    {
+        "reviewID": "9",
+        "userID": "1",
+        "productID": "2",
+        "review": "Xolo products have better camera quality. and the built quality is great as well"
+    },
+    {
+        "reviewID": "10",
+        "userID": "1",
+        "productID": "5",
+        "review": "good phone with excellent battery life."
+    },
+    {
+        "reviewID": "11",
+        "userID": "6",
+        "productID": "6",
+        "review": "Moto E has good large screen. the video quality is great too."
+    },
+    {
+        "reviewID": "12",
+        "userID": "6",
+        "productID": "8",
+        "review": "Cheapest phone among others. the battery life is excellent"
     }
 ]

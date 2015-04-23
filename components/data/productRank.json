@@ -1,0 +1,38 @@
+{
+    "3": {
+        "productRank": 1.085386510085,
+        "productID": 4
+    },
+    "2": {
+        "productRank": 1.0494666816547,
+        "productID": 3
+    },
+    "0": {
+        "productRank": 0.8231543565209,
+        "productID": 1
+    },
+    "8": {
+        "productRank": 0.71284469927331,
+        "productID": 9
+    },
+    "6": {
+        "productRank": 0.3409258150488,
+        "productID": 7
+    },
+    "1": {
+        "productRank": 0.18430744475941,
+        "productID": 2
+    },
+    "4": {
+        "productRank": 0.093617264045304,
+        "productID": 5
+    },
+    "7": {
+        "productRank": 0.0704629075244,
+        "productID": 8
+    },
+    "5": {
+        "productRank": 0.04338162971061,
+        "productID": 6
+    }
+}

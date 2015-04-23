@@ -16,9 +16,14 @@ class POSTag extends Object
 		$tagger = new PosTagger($lexicon);
 		$tags = $tagger->tag($query);
 
+		echo "<table><tr><th>Token</th> <th>Tag</th></tr>";
 		foreach ($tags as $t) {
-			echo $t['token'] . "/" . $t['tag'] . " ";
+//			echo  $t['token'] . "/" . $t['tag'] . " ";
+
+
+			echo "<table><tr><td> " . $t['token'] . " </td> <td> " . $t['tag'] . " </td></tr>";
 		}
+		echo "</table>";
 
 		return $tags;
 	}

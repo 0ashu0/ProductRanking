@@ -1,0 +1,38 @@
+[
+    {
+        "productID": 1,
+        "productRank": 0.81284300519616
+    },
+    {
+        "productID": 2,
+        "productRank": 0
+    },
+    {
+        "productID": 3,
+        "productRank": 1.0232744362221
+    },
+    {
+        "productID": 4,
+        "productRank": 1.1324364309298
+    },
+    {
+        "productID": 5,
+        "productRank": 0
+    },
+    {
+        "productID": 6,
+        "productRank": 0
+    },
+    {
+        "productID": 7,
+        "productRank": 0.33333333333333
+    },
+    {
+        "productID": 8,
+        "productRank": 0
+    },
+    {
+        "productID": 9,
+        "productRank": 0.68373380926266
+    }
+]

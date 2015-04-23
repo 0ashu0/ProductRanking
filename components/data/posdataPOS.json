@@ -3,8 +3,9 @@
         "reviewID": "1",
         "userID": "1",
         "productID": "1",
+        "review": "it is a very good product. best for those who just want basic functionalities.",
         "Sentence": [
-            "it is a good product",
+            "it is a very good product",
             "pos"
         ],
         "posArray": [
@@ -21,6 +22,10 @@
                 "tag": "DT"
             },
             {
+                "token": "very",
+                "tag": "RB"
+            },
+            {
                 "token": "good",
                 "tag": "JJ"
             },
@@ -34,6 +39,7 @@
         "reviewID": "1",
         "userID": "1",
         "productID": "1",
+        "review": "it is a very good product. best for those who just want basic functionalities.",
         "Sentence": [
             "best for those who just want basic functionalities.",
             "pos"
@@ -77,6 +83,7 @@
         "reviewID": "2",
         "userID": "1",
         "productID": "9",
+        "review": "It has a good quality camera, and battery life is great too. Quite difficult to hold as the phone size is big. but big screen is good for video viewing.",
         "Sentence": [
             "It has a good quality camera, and battery life is great too",
             "pos"
@@ -136,6 +143,7 @@
         "reviewID": "2",
         "userID": "1",
         "productID": "9",
+        "review": "It has a good quality camera, and battery life is great too. Quite difficult to hold as the phone size is big. but big screen is good for video viewing.",
         "Sentence": [
             "Quite difficult to hold as the phone size is big",
             "pos"
@@ -187,6 +195,7 @@
         "reviewID": "2",
         "userID": "1",
         "productID": "9",
+        "review": "It has a good quality camera, and battery life is great too. Quite difficult to hold as the phone size is big. but big screen is good for video viewing.",
         "Sentence": [
             "but big screen is good for video viewing.",
             "pos"
@@ -230,6 +239,7 @@
         "reviewID": "3",
         "userID": "1",
         "productID": "4",
+        "review": "great phone. It has excellent 12 MP camera and 1600 dpi screen. sound quality is just excellent. Screen size is good and the processor is fastest among others.",
         "Sentence": [
             "great phone",
             "pos"
@@ -249,6 +259,7 @@
         "reviewID": "3",
         "userID": "1",
         "productID": "4",
+        "review": "great phone. It has excellent 12 MP camera and 1600 dpi screen. sound quality is just excellent. Screen size is good and the processor is fastest among others.",
         "Sentence": [
             "It has excellent 12 MP camera and 1600 dpi screen",
             "pos"
@@ -300,6 +311,7 @@
         "reviewID": "3",
         "userID": "1",
         "productID": "4",
+        "review": "great phone. It has excellent 12 MP camera and 1600 dpi screen. sound quality is just excellent. Screen size is good and the processor is fastest among others.",
         "Sentence": [
             "sound quality is just excellent",
             "pos"
@@ -331,6 +343,7 @@
         "reviewID": "3",
         "userID": "1",
         "productID": "4",
+        "review": "great phone. It has excellent 12 MP camera and 1600 dpi screen. sound quality is just excellent. Screen size is good and the processor is fastest among others.",
         "Sentence": [
             "Screen size is good and the processor is fastest among others.",
             "pos"
@@ -386,6 +399,7 @@
         "reviewID": "4",
         "userID": "5",
         "productID": "4",
+        "review": "it has an excellent Retina display. battery life is not good but can be better. The camera is great and has 12 MP. The sound is ok but I use headphone.",
         "Sentence": [
             "it has an excellent Retina display",
             "pos"
@@ -421,6 +435,7 @@
         "reviewID": "4",
         "userID": "5",
         "productID": "4",
+        "review": "it has an excellent Retina display. battery life is not good but can be better. The camera is great and has 12 MP. The sound is ok but I use headphone.",
         "Sentence": [
             "battery life is not good but can be better",
             "pos"
@@ -468,6 +483,7 @@
         "reviewID": "4",
         "userID": "5",
         "productID": "4",
+        "review": "it has an excellent Retina display. battery life is not good but can be better. The camera is great and has 12 MP. The sound is ok but I use headphone.",
         "Sentence": [
             "The camera is great and has 12 MP",
             "pos"
@@ -511,6 +527,7 @@
         "reviewID": "5",
         "userID": "5",
         "productID": "3",
+        "review": "Not better than apple i5 but still good. The camera is better and the battery life is good as well. sound quality is great but lacks clarity. Processor is of excellent quality and is fast.",
         "Sentence": [
             "Not better than apple i5 but still good",
             "pos"
@@ -554,6 +571,7 @@
         "reviewID": "5",
         "userID": "5",
         "productID": "3",
+        "review": "Not better than apple i5 but still good. The camera is better and the battery life is good as well. sound quality is great but lacks clarity. Processor is of excellent quality and is fast.",
         "Sentence": [
             "The camera is better and the battery life is good as well",
             "pos"
@@ -613,6 +631,7 @@
         "reviewID": "5",
         "userID": "5",
         "productID": "3",
+        "review": "Not better than apple i5 but still good. The camera is better and the battery life is good as well. sound quality is great but lacks clarity. Processor is of excellent quality and is fast.",
         "Sentence": [
             "sound quality is great but lacks clarity",
             "pos"
@@ -652,6 +671,7 @@
         "reviewID": "5",
         "userID": "5",
         "productID": "3",
+        "review": "Not better than apple i5 but still good. The camera is better and the battery life is good as well. sound quality is great but lacks clarity. Processor is of excellent quality and is fast.",
         "Sentence": [
             "Processor is of excellent quality and is fast.",
             "pos"
@@ -695,6 +715,7 @@
         "reviewID": "6",
         "userID": "3",
         "productID": "9",
+        "review": "Samsung star lacks a good camera and perhaps can make improvement in the sound quality as well. the body is not that good and is not hand friendly.",
         "Sentence": [
             "Samsung star lacks a good camera and perhaps can make improvement in the sound quality as well",
             "pos"
@@ -774,6 +795,7 @@
         "reviewID": "7",
         "userID": "3",
         "productID": "3",
+        "review": "Its a very good iPhone. being i4s the processor is not better than I5 but still it is quite fast. Camera is great and is capable of taking high-quality pictures.",
         "Sentence": [
             "Its a very good iPhone",
             "pos"
@@ -805,6 +827,7 @@
         "reviewID": "7",
         "userID": "3",
         "productID": "3",
+        "review": "Its a very good iPhone. being i4s the processor is not better than I5 but still it is quite fast. Camera is great and is capable of taking high-quality pictures.",
         "Sentence": [
             "being i4s the processor is not better than I5 but still it is quite fast",
             "pos"
@@ -876,6 +899,7 @@
         "reviewID": "7",
         "userID": "3",
         "productID": "3",
+        "review": "Its a very good iPhone. being i4s the processor is not better than I5 but still it is quite fast. Camera is great and is capable of taking high-quality pictures.",
         "Sentence": [
             "Camera is great and is capable of taking high-quality pictures.",
             "pos"
@@ -931,6 +955,7 @@
         "reviewID": "8",
         "userID": "3",
         "productID": "7",
+        "review": "This phone has better sound quality but lacks strong body. overall battery life is ok and works till 36 hours without charging.",
         "Sentence": [
             "This phone has better sound quality but lacks strong body",
             "pos"
@@ -975,6 +1000,218 @@
             {
                 "token": "body",
                 "tag": "NN\r\n"
+            }
+        ]
+    },
+    {
+        "reviewID": "9",
+        "userID": "1",
+        "productID": "2",
+        "review": "Xolo products have better camera quality. and the built quality is great as well",
+        "Sentence": [
+            "Xolo products have better camera quality",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "Xolo",
+                "tag": "NN"
+            },
+            {
+                "token": "products",
+                "tag": "NNS\r\n"
+            },
+            {
+                "token": "have",
+                "tag": "VBP"
+            },
+            {
+                "token": "better",
+                "tag": "JJR"
+            },
+            {
+                "token": "camera",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "quality",
+                "tag": "NN"
+            }
+        ]
+    },
+    {
+        "reviewID": "9",
+        "userID": "1",
+        "productID": "2",
+        "review": "Xolo products have better camera quality. and the built quality is great as well",
+        "Sentence": [
+            "and the built quality is great as well",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "and",
+                "tag": "CC"
+            },
+            {
+                "token": "the",
+                "tag": "DT"
+            },
+            {
+                "token": "built",
+                "tag": "VBN"
+            },
+            {
+                "token": "quality",
+                "tag": "NN"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "great",
+                "tag": "JJ"
+            },
+            {
+                "token": "as",
+                "tag": "IN"
+            },
+            {
+                "token": "well",
+                "tag": "RB"
+            }
+        ]
+    },
+    {
+        "reviewID": "10",
+        "userID": "1",
+        "productID": "5",
+        "review": "good phone with excellent battery life.",
+        "Sentence": [
+            "good phone with excellent battery life.",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "good",
+                "tag": "JJ"
+            },
+            {
+                "token": "phone",
+                "tag": "NN"
+            },
+            {
+                "token": "with",
+                "tag": "IN"
+            },
+            {
+                "token": "excellent",
+                "tag": "JJ\r\n"
+            },
+            {
+                "token": "battery",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "life.",
+                "tag": "NN"
+            }
+        ]
+    },
+    {
+        "reviewID": "11",
+        "userID": "6",
+        "productID": "6",
+        "review": "Moto E has good large screen. the video quality is great too.",
+        "Sentence": [
+            "the video quality is great too.",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "the",
+                "tag": "DT"
+            },
+            {
+                "token": "video",
+                "tag": "NN"
+            },
+            {
+                "token": "quality",
+                "tag": "NN"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "great",
+                "tag": "JJ"
+            },
+            {
+                "token": "too.",
+                "tag": "RB\r\n"
+            }
+        ]
+    },
+    {
+        "reviewID": "12",
+        "userID": "6",
+        "productID": "8",
+        "review": "Cheapest phone among others. the battery life is excellent",
+        "Sentence": [
+            "Cheapest phone among others",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "Cheapest",
+                "tag": "JJS\r\n"
+            },
+            {
+                "token": "phone",
+                "tag": "NN"
+            },
+            {
+                "token": "among",
+                "tag": "IN\r\n"
+            },
+            {
+                "token": "others",
+                "tag": "NNS\r\n"
+            }
+        ]
+    },
+    {
+        "reviewID": "12",
+        "userID": "6",
+        "productID": "8",
+        "review": "Cheapest phone among others. the battery life is excellent",
+        "Sentence": [
+            "the battery life is excellent",
+            "pos"
+        ],
+        "posArray": [
+            {
+                "token": "the",
+                "tag": "DT"
+            },
+            {
+                "token": "battery",
+                "tag": "NN\r\n"
+            },
+            {
+                "token": "life",
+                "tag": "NN"
+            },
+            {
+                "token": "is",
+                "tag": "VBZ"
+            },
+            {
+                "token": "excellent",
+                "tag": "JJ\r\n"
             }
         ]
     }

@@ -5,3 +5,5 @@
  * Date: 3/20/2015
  * Time: 3:34 PM
  */
+
+echo '<pre>', var_export($bigArray), '<pre/>';

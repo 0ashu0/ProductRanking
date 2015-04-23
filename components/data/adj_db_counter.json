@@ -1,0 +1,74 @@
+[
+    {
+        "adj": "good",
+        "CR": 9,
+        "TR": 12,
+        "IDF": 0.11577178260452
+    },
+    {
+        "adj": "best",
+        "CR": 1,
+        "TR": 12,
+        "IDF": 1
+    },
+    {
+        "adj": "basic",
+        "CR": 1,
+        "TR": 12,
+        "IDF": 1
+    },
+    {
+        "adj": "great",
+        "CR": 7,
+        "TR": 12,
+        "IDF": 0.21690814855305
+    },
+    {
+        "adj": "difficult",
+        "CR": 1,
+        "TR": 12,
+        "IDF": 1
+    },
+    {
+        "adj": "big",
+        "CR": 1,
+        "TR": 12,
+        "IDF": 1
+    },
+    {
+        "adj": "excellent",
+        "CR": 5,
+        "TR": 12,
+        "IDF": 0.352314537622
+    },
+    {
+        "adj": "fastest",
+        "CR": 1,
+        "TR": 12,
+        "IDF": 1
+    },
+    {
+        "adj": "better",
+        "CR": 5,
+        "TR": 12,
+        "IDF": 0.352314537622
+    },
+    {
+        "adj": "capable",
+        "CR": 1,
+        "TR": 12,
+        "IDF": 1
+    },
+    {
+        "adj": "high",
+        "CR": 1,
+        "TR": 12,
+        "IDF": 1
+    },
+    {
+        "adj": "strong",
+        "CR": 1,
+        "TR": 12,
+        "IDF": 1
+    }
+]

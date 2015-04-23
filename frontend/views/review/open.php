@@ -23,4 +23,13 @@ echo '<br/>';
 
 echo '<br>';
 
-echo '<pre>', var_export($bigArray), '<pre/>';
+//echo '<pre>', var_export($bigArray), '<pre/>';
+
+foreach($bigArray as $array)
+{
+    echo '<br>';
+    echo $array['allReviews']['first']['0'];
+    echo '<br>';
+    echo $array['allReviews']['first']['1'];
+    echo '<br>';
+}

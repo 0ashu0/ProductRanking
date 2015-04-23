@@ -3,10 +3,10 @@
         "reviewID": "1",
         "userID": "1",
         "productID": "1",
-        "review": "it is a good product. best for those who just want basic functionalities.",
+        "review": "it is a very good product. best for those who just want basic functionalities.",
         "allReviews": {
             "first": [
-                "it is a good product",
+                "it is a very good product",
                 "pos"
             ],
             "second": [
@@ -168,6 +168,102 @@
             "second": [
                 "overall battery life is ok and works till 36 hours without charging.",
                 "neg"
+            ],
+            "third": [
+                "Camera is great and is capable of taking high-quality pictures.",
+                "pos"
+            ],
+            "fourth": [
+                "Processor is of excellent quality and is fast.",
+                "pos"
+            ]
+        }
+    },
+    {
+        "reviewID": "9",
+        "userID": "1",
+        "productID": "2",
+        "review": "Xolo products have better camera quality. and the built quality is great as well",
+        "allReviews": {
+            "first": [
+                "Xolo products have better camera quality",
+                "pos"
+            ],
+            "second": [
+                "and the built quality is great as well",
+                "pos"
+            ],
+            "third": [
+                "Camera is great and is capable of taking high-quality pictures.",
+                "pos"
+            ],
+            "fourth": [
+                "Processor is of excellent quality and is fast.",
+                "pos"
+            ]
+        }
+    },
+    {
+        "reviewID": "10",
+        "userID": "1",
+        "productID": "5",
+        "review": "good phone with excellent battery life.",
+        "allReviews": {
+            "first": [
+                "good phone with excellent battery life.",
+                "pos"
+            ],
+            "second": [
+                "and the built quality is great as well",
+                "pos"
+            ],
+            "third": [
+                "Camera is great and is capable of taking high-quality pictures.",
+                "pos"
+            ],
+            "fourth": [
+                "Processor is of excellent quality and is fast.",
+                "pos"
+            ]
+        }
+    },
+    {
+        "reviewID": "11",
+        "userID": "6",
+        "productID": "6",
+        "review": "Moto E has good large screen. the video quality is great too.",
+        "allReviews": {
+            "first": [
+                "Moto E has good large screen",
+                "neg"
+            ],
+            "second": [
+                "the video quality is great too.",
+                "pos"
+            ],
+            "third": [
+                "Camera is great and is capable of taking high-quality pictures.",
+                "pos"
+            ],
+            "fourth": [
+                "Processor is of excellent quality and is fast.",
+                "pos"
+            ]
+        }
+    },
+    {
+        "reviewID": "12",
+        "userID": "6",
+        "productID": "8",
+        "review": "Cheapest phone among others. the battery life is excellent",
+        "allReviews": {
+            "first": [
+                "Cheapest phone among others",
+                "pos"
+            ],
+            "second": [
+                "the battery life is excellent",
+                "pos"
             ],
             "third": [
                 "Camera is great and is capable of taking high-quality pictures.",
